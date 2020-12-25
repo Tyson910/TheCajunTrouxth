@@ -1,0 +1,30 @@
+body{
+    margin: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+.links-flex{
+    display:flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.landing-links{
+    margin: 2%;
+    text-align: center;
+    padding: 24px;
+    color:whitesmoke;
+    background-color: rebeccapurple;
+}
+
+@media only screen and (max-width: 750px){
+    .links-flex{
+        flex-flow: column;
+        
+    }
+    .landing-links{
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 5%;
+    }
+}
