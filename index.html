@@ -3,15 +3,16 @@
 <html lang="en">
 <head>
     <title>The Cajun Trouxth</title>
-</head>
-
-<body>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
     <link href='main.css' rel='stylesheet' />
     <link href='grids.css' rel='stylesheet' />
     <link href='nav-bar.css' rel="stylesheet" />
-<header class="main_h">
+</head>
 
+<body>
+<header class="main_h">
     <div class="row">
         <a class="logo" href="#">L/F</a>
 
@@ -50,41 +51,28 @@
 
 
     <main class="row content">
-        <!--
-        <div class='row col-2' id='row-1'>
-            <h1 class="sec01">About Us</h1>
-            <p>we sell food bruv</p>  
+        <div class='col-3'>
+            <h1>About Us</h1>
+            <p>We started selling food in 1993 and haven't looked back since</p>
         </div>
-
-        <div class='row col-2' id='row-2'>
-            <h1 class="sec02">Food Truck</h1>
-            <p>We offer a rotating menu from the below</p>
-        </div>
-
-        <div class='row col-2' id='row-3'>
-            <h1 class="sec03">Catering </h1>
-            <p>We also offer Catering</p>
-        </div>
-
-        <div class='row col-2' id='row-4'>
-            <h1 class="sec04">Contact</h1>
-            <p>Contact Info</p>
-        </div>
-    -->
-
-        <div class='col-3'><h1>About Us</h1></div>
-        <div><h1>Food Carousel</h1></div>
-        <div class="span-col-2">
+        
+        <div class="w3-content w3-section" style="max-width:500px">
+                <img class="mySlides" src="pic_1.jpg" >
+                <img class="mySlides" src="pic_2.jpg" >
+                <img class="mySlides" src="pic_3.jpg" >
+                <img class="mySlides" src="pic_4.jpg" >
+              </div>
+        <div class="col-2">
             <h2> We offer a rotating menu </h2>
             <p>Fresh fish and fresh rice and fresh beans</p>
         </div>
-        <div class="span-col-3" id='google'><h1>Calendar</h1></div>
+        <div class="col-3" id='google'><h1>Calendar</h1></div>
         <div><h1>Catering Pic or Link</h1></div>
-        <div class="span-col-2">
+        <div class="col-2">
             <h2>We also offer catering to events</h2>
-            <p>We can do weddings, work events, anything really just let me kno</p> 
+            <p>We are able & fully equipped to prepare foods and deliver to the desired location or venue, while we also have the ability to prepare foods on site if it so desired or preferred by the client.</p> 
         </div>
-        <div class="span-col-3">
+        <div class="col-3">
             <h1>Contact Us</h1>
             <p>here is our email here is our phone number here is our IG </p>
         </div>
@@ -93,5 +81,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src='nav-scroll.js'></script>
+<script src='carousel.js'></script>
 </body>
 </html>
