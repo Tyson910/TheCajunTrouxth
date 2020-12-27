@@ -33,6 +33,7 @@ img{
 .slideshow-btn{
     cursor: pointer;
     align-self: center;
+    font-size: x-large;
 }
 #right{
     grid-column: 3;
