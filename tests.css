@@ -1,0 +1,48 @@
+.slideshow-container{
+    border: black solid 2px;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+
+}
+.inner{
+    border: blue dashed 2px;
+    align-content: center;
+}
+/*
+.mySlides{
+    display: grid;
+    grid-template-columns: 1fr;
+    border: double green 5px;
+}
+*/
+p{
+    margin: 0 0 0 0;
+    height: 5vh;
+    background: #333;
+    color: white;
+}
+img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+.slideshow-dots{
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active, .dot:hover {
+    background-color: #717171
+}

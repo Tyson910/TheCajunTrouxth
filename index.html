@@ -9,6 +9,7 @@
     <link href='main.css' rel='stylesheet' />
     <link href='grids.css' rel='stylesheet' />
     <link href='nav-bar.css' rel="stylesheet" />
+    <link href="slideshow.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -55,13 +56,46 @@
             <h1>About Us</h1>
             <p>We started selling food in 1993 and haven't looked back since</p>
         </div>
+
+        <div id='col-1-row-2'>
+            <div class="slideshow-container">
+                    <div class="slideshow-inner">
+
+                        <div class="mySlides fade">
+                            <img  src='pic_1.jpg' alt="sally lightfoot crab"/>
+                            <div class="text">Sally Lightfoot Crab</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <img  src='pic_2.jpg' alt="fighting nazca boobies"/>
+                            <div class="text">A scuffle between two Nazca Boobies</div>
+                        </div>
+                        <!-- 
+                        <div class="mySlides fade">
+                            <img  src='pic_3.jpg' alt="otovalo waterfall"/>
+                            <div class="text">A waterfall discovered on a hike in Otovalo</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <img  src='pic_4.jpg' alt="pelican"/>
+                            <div class="text">Pelican</div>
+                        </div>
+                        -->
+                    </div>
+
+                <div class='slideshow-dots'>
+                    <span class="dot" onclick='currentSlide(1)'></span>
+                    <span class="dot" onclick='currentSlide(2)'></span>
+                    <span class="dot" onclick='currentSlide(3)'></span>
+                    <span class="dot" onclick='currentSlide(4)'></span>
+                </div>
+
+            </div>
+
+            
         
-        <div class="w3-content w3-section" style="max-width:500px">
-                <img class="mySlides" src="pic_1.jpg" >
-                <img class="mySlides" src="pic_2.jpg" >
-                <img class="mySlides" src="pic_3.jpg" >
-                <img class="mySlides" src="pic_4.jpg" >
-              </div>
+        </div>
+
         <div class="col-2">
             <h2> We offer a rotating menu </h2>
             <p>Fresh fish and fresh rice and fresh beans</p>
@@ -81,6 +115,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src='nav-scroll.js'></script>
-<script src='carousel.js'></script>
+<!--<script src='carousel.js'></script>-->
+<script src='newCarousel.js'></script>
 </body>
 </html>
