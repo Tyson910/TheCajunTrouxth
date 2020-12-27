@@ -45,6 +45,17 @@ function currentSlide(n){
   myTimer = setInterval( ()=> change_i(), 4000);
 }
 
+function minusOne(){
+  clearInterval(myTimer);
+  if (i){
+    i = i - 1;
+  }
+  else{
+    i = imgArray.length-1;
+  }
+  changeDisplay(i);
+}
+
 const pause = () => {
   clearInterval(myTimer);
 }
