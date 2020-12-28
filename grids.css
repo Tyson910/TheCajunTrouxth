@@ -19,6 +19,13 @@ main{
 .mySlides{
     width:100%;
 }
+/*
+@media only screen and (min-width: 830px){
+    .span-row-2{
+        grid-row: span 2 / auto;
+    }
+}
+*/
 @media only screen and (max-width: 830px) {
     main{
         grid-template-columns: 1fr;

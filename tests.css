@@ -1,10 +1,4 @@
 .slideshow-container{
-    width: 50%;
-    /*
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    */
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-gap: 10px;
@@ -14,8 +8,7 @@
     grid-column: 2;
     align-content: center;
     display:flex;
-    flex-flow: column;
-    
+    flex-flow: column;   
 }
 
 #caption{
@@ -36,7 +29,7 @@ img{
     font-size: x-large;
 }
 #right{
-    grid-column: 3;
+   grid-column: 3; 
     grid-row: 1;
 }
 #left{
@@ -64,6 +57,7 @@ img{
 .active, .dot:hover {
     background-color: #717171
 }
+
 @media only screen and (max-width: 830px){
     .slideshow-btn{
         display:none;
