@@ -120,11 +120,13 @@ iframe{
 .cal-container{
     margin:2% 0;
 }
-
 .center{
     text-align: center;
     justify-self: center;
     align-self: center;
+}
+.margin-tb{
+    margin: 4% 0;
 }
 #catering-link{
     text-decoration: none;
@@ -132,4 +134,11 @@ iframe{
     padding: 14px;
     color:white;
     background-color: rebeccapurple ;
+
+}
+footer{
+    padding: 1%;
+    margin-top: 100vh;
+    background-color: #333;
+    color: whitesmoke;
 }
