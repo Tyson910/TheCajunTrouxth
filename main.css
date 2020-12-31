@@ -1,6 +1,8 @@
 body{
     margin: 0 0 0 0;
     box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
 }
 
 .links-flex{
@@ -58,7 +60,7 @@ img{
 }
 .slideshow-btn{
     cursor: pointer;
-   align-self: center;
+    align-self: center;
     font-size: x-large;
 }
 #right{
@@ -138,19 +140,7 @@ iframe{
 }
 footer{
     padding: 1%;
-    margin-top: 100vh;
     background-color: #333;
     color: whitesmoke;
-}
-@media only screen and (max-width: 831px){
-    footer{
-        padding: 1%;
-        margin-top: 130vh;
-    }
-}
-@media only screen and (max-width: 530px){
-    footer{
-        padding: 1%;
-        margin-top: 115vh;
-    }
+    width: 100%;
 }
