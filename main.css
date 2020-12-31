@@ -105,14 +105,6 @@ img{
     }
 }
 
-@media only screen and (min-width: 620px){
-    .inner{
-        height: 60vh;
-    }
-    .slideshow-dots{
-        grid-row: 5;
-    }
-}
 /* style calender */
 iframe{
     width: 100%;
