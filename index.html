@@ -8,14 +8,13 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
     <link href='main.css' rel='stylesheet' />
     <link href='grids.css' rel='stylesheet' />
-    <!--<link href='tests.css' rel="styesheet"/>-->
     <link href='nav-bar.css' rel="stylesheet" />
 </head>
 
 <body>
 <header class="main_h">
     <div class="row">
-        <a class="logo" href="#">L/F</a>
+        <a class="logo" href="#top">Home</a>
 
         <div class="mobile-toggle">
             <span></span>
@@ -25,10 +24,10 @@
 
         <nav>
             <ul>
-                <li><a href=".sec01">Section 01</a></li>
-                <li><a href=".sec02">Section 02</a></li>
-                <li><a href=".sec03">Section 03</a></li>
-                <li><a href=".sec04">Section 04</a></li>
+                <li><a href=".slideshow-container">Food Truck</a></li>
+                <li><a href=".cal-container">Schedule</a></li>
+                <li><a href=".catering">Catering</a></li>
+                <li><a href="footer">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -58,13 +57,17 @@
         </div>
 
         <div class="slideshow-container">
-            
+        
             <a class='slideshow-btn' id='left' onclick='minusOne()'>&#10094;</a>
             <a class='slideshow-btn' id='right' onclick='change_i()'>&#10095;</a>
 
                 <div class="inner span-row-2">
                         <img id='carousel-pic' />
                         <div id='caption'></div>
+                        <noscript>
+                            <img id='carousel-pic' src='pic_1.jpg' alt='pic of food' />
+                            <div id='caption'>pic of food</div>
+                        </noscript>
                 </div>
 
             <div class='slideshow-dots'>
@@ -80,24 +83,24 @@
             <h2> We offer a rotating menu </h2>
             <p>Fresh fish and fresh rice and fresh beans</p>
         </div>
+
         <div class="col-3 cal-container" >
                 <iframe  title='Food Truck Upcoming Schedule' src="https://calendar.google.com/calendar/embed?height=200&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=dHlzb25zLjQxN0BnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Z3VmaDBlcnRuOGhvaWdvaTgzbjlycm00MjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%23D81B60&amp;color=%230B8043&amp;mode=AGENDA&amp;title=Test&amp;showNav=0&amp;showCalendars=1&amp;showTz=1" ></iframe>  
         </div>
         <div class='center catering col-3'>
-            <h2>We also offer catering to events</h2>
+            <h2 class='margin-tb'>We also offer catering to events</h2>
             <a class='link-btn' id='catering-link' href='#'>Click Here to Schedule an Event</a>
-            <p>We are able & fully equipped to prepare foods and deliver to the desired location or venue, while we also have the ability to prepare foods on site if it so desired or preferred by the client.</p> 
+            <p class='margin-tb'>We are able & fully equipped to prepare foods and deliver to the desired location or venue, while we also have the ability to prepare foods on site if it so desired or preferred by the client.</p> 
 
         </div>
 
-        <footer class='center'>
-            <div class="col-3">
-                <h1>Contact Us</h1>
-                <p>here is our email here is our phone number here is our IG </p>
-            </div>
-        </footer>
     </main>
-
+    <footer class='center'>
+        <div class="col-3">
+            <h1>Contact Us</h1>
+            <p>here is our email here is our phone number here is our IG </p>
+        </div>
+    </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src='nav-scroll.js'></script>
 <script src='carousel.js'></script>
