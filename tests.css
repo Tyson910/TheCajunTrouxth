@@ -39,12 +39,6 @@
     left: 100%
   }
 
-  .slide_img_03 {
-    background : url('pic_3.jpg') no-repeat center;
-    background-size : cover;
-    left: 100%
-  }
-
   .control {
     position: absolute;
     top: 50%;
@@ -139,3 +133,14 @@
           stroke-width : 0;
         }
         }
+
+        .embla {
+            overflow: hidden;
+          }
+          .embla__container {
+            display: flex;
+          }
+          .embla__slide {
+            position: relative;
+            min-width: 100%;
+          }

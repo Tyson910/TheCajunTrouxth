@@ -4,6 +4,31 @@ body{
     display: flex;
     flex-flow: column;
 }
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.col-2{
+    grid-column: span 2 / auto;
+}
+
+.col-3{
+    grid-column: span 3 / auto;
+}
+
+@media only screen and (max-width: 830px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+    .col-2 , .col-3{
+        grid-column: 1;
+    }
+    .mySlider{
+        height: 100vh;
+    }
+}
 
 .links-flex{
     display:flex;
@@ -33,72 +58,21 @@ body{
 }
 
 .slideshow-container{
-    display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    grid-gap: 10px;
+    width: 35vw;
+}
 
-}
-.inner{
-    grid-column: 2;
-    align-content: center;
-    display:flex;
-    flex-flow: column;
-    
-}
-#caption{
-    text-align: center;
-    margin: 0 0 0 0;
-    padding: 2%;
-    background: #333;
-    color: white;
-}
+
 img{
     object-fit: contain;
     max-width: initial;
     max-height: 100%;
     
 }
-.slideshow-btn{
-    cursor: pointer;
-    align-self: center;
-    font-size: x-large;
-}
-#right{
-    grid-column: 3;
-    grid-row: 1;
-}
-#left{
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: right;
-}
-.slideshow-dots{
-    grid-column: 2;
-    text-align: center;
-    margin-top: 3%;
-}
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color .6s ease
-}
-
-.active, .dot:hover {
-    background-color: #717171
-}
 @media only screen and (max-width: 830px){
     img{
         max-width: 100%;
         max-height: 100%;
-    }
-    .slideshow-btn{
-        display:none;
     }
     .catering{
         margin: 7% 0;
