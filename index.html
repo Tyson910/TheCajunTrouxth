@@ -24,7 +24,7 @@
 
         <nav>
             <ul>
-                <li><a href=".slideshow-container">Food Truck</a></li>
+                <li><a href=".mySlider">Food Truck</a></li>
                 <li><a href=".cal-container">Schedule</a></li>
                 <li><a href=".catering">Catering</a></li>
                 <li><a href="footer">Contact Us</a></li>
@@ -37,12 +37,12 @@
 
 <div class="hero">
 
-    <h1><span>The Cajun Trouxth</span><br>We got food mane.</h1>
+    <h1><span>The Cajun Trouxth</span><br>Good food.</h1>
 
     <div class='links-flex'>
-        <a class='landing-links'> Food Truck </a>
-        <a class='landing-links'> Catering </a>
-        <a class='landing-links'> Contact </a>
+        <a class='landing-links' href="#slider-container"> Food Truck </a>
+        <a class='landing-links' href="#catering-link"> Catering </a>
+        <a class='landing-links' href="#footer"> Contact </a>
     </div>
 
 
@@ -53,10 +53,10 @@
     <main class="row content">
         <div class='col-3'>
             <h1>About Us</h1>
-            <p>We started selling food in 1993 and haven't looked back since</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis enim ut tellus elementum sagittis vitae et leo duis. Felis eget nunc lobortis mattis aliquam faucibus. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Justo laoreet sit amet cursus sit amet. Mi proin sed libero enim. Blandit massa enim nec dui nunc mattis. Arcu bibendum at varius vel pharetra vel turpis nunc. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Tortor vitae purus faucibus ornare suspendisse sed. Tincidunt praesent semper feugiat nibh sed. Neque egestas congue quisque egestas diam in. Enim sed faucibus turpis in eu mi bibendum neque.</p>
         </div>
 
-        <div class="mySlider">
+        <div class="mySlider col-2" id='slider-container'>
             <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
             <input type="radio" name="slider" class="slide-radio2" id="slider_2">
 
@@ -90,9 +90,15 @@
 
 
 
-        <div class="col-2">
+        <div class="center">
             <h2> We offer a rotating menu </h2>
-            <p>Fresh fish and fresh rice and fresh beans</p>
+            <ul class='food-list'>
+                <li>Fresh catfish</li>
+                <li>Red Beans & Rice</li>
+                <li>Pasta</li>
+                <li>Gumbo</li>
+                <p>and more!!</p>
+            </ul>
         </div>
 
         <div class="col-3 cal-container" >
@@ -106,7 +112,7 @@
         </div>
 
     </main>
-    <footer class='center'>
+    <footer class='center' id='footer'>
         <div class="col-3">
             <h1>Contact Us</h1>
             <p>here is our email here is our phone number here is our IG </p>
@@ -114,7 +120,6 @@
     </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src='nav-scroll.js'></script>
-<!--<script src='carousel.js'></script>-->
 
 </body>
 </html>

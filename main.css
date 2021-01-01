@@ -56,12 +56,9 @@ main{
     }
 
 }
-
-.slideshow-container{
-    width: 35vw;
+.food-list{
+    text-align: left;
 }
-
-
 img{
     object-fit: contain;
     max-width: initial;
