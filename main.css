@@ -28,6 +28,10 @@ main{
     .mySlider{
         height: 100vh;
     }
+    .menu-info.center{
+        justify-self: initial;
+    }
+
 }
 
 .links-flex{
@@ -77,14 +81,32 @@ img{
 }
 
 /* style calender */
-iframe{
-    width: 100%;
-    border:solid 1px #777;
-    height: 50vh;
-}
+
 .cal-container{
     margin:2% 0;
 }
+[style*="--aspect-ratio"] > :first-child {
+    width: 100%;
+  }
+  [style*="--aspect-ratio"] > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    [style*="--aspect-ratio"] {
+      position: relative;
+    }
+    [style*="--aspect-ratio"]::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }  
+    [style*="--aspect-ratio"] > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+}  
 .center{
     text-align: center;
     justify-self: center;
