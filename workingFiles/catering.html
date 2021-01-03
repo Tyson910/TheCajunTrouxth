@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>The Cajun Trouxth</title>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="nav-bar.css" rel="stylesheet" />
+    <link href="forms.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <header class="main_h">
+        <div class="row">
+            <a class="logo" href="index.html">Home</a>
+    
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href="index.html#slider-container">Food Truck</a></li>
+                    <li><a href="index.html#container">Schedule</a></li>
+                    <li><a href="index.html#catering-link">Catering</a></li>
+                    <li><a href="index.html#footer">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+
+    <main>
+
+          <div class="form-style-10">
+            <h1>Big Event Coming Soon?<span>Sign up for our Catering Services??</span></h1>
+            <form>
+                <div class="section"><span>1</span>Contact Info</div>
+                <div class="inner-wrap">
+                    <label>First Name <input required type="text" name="first-name"/> </label>
+                    <label>Last Name <input required type="text" name="last-name"/> </label>
+                    <label>Phone Number <input required type="tel" name="phoneNum"/> </label>
+                    <label>Email Address <input required type="email" name="email" /></label>
+                </div>
+            
+                <div class="section"><span>2</span>Event Info</div>
+                <div class="inner-wrap">
+                    <label> Event Date <input required type="date" name="event_date" /></label>
+                    <label> Event Address <textarea name="event_address"></textarea></label>
+                    <label> City <input required type="text" name="event_city" /></label>
+                    <label> State <input required type="text" name="event_state" /></label>
+                    <label> Zip Code <input required type="text" name="event_zipCode" /></label>
+                    <label> Guest Estimate <input required type="number" name="guest_count"/> </label>
+                </div>
+            
+                <div class="section"><span>3</span>Additional Comments</div>
+                    <div class="inner-wrap">
+                    <label> Comments <textarea name="event_comments"></textarea></label>
+                </div>
+
+                <div class="button-section">
+                 <input type="submit" name="Sign Up" />
+                </div>
+            </form>
+            </div>
+
+    </main>
+
+    <footer class='center' id='footer'>
+        <div class="col-3">
+            <h1>Contact Us</h1>
+            <p>here is our email here</p>
+            <p>here is our phone number</p> 
+            <p>here is our IG </p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='nav-scroll.js'></script>
+</body>
+</html>
