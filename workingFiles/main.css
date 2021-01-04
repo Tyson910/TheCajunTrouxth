@@ -76,8 +76,14 @@ img{
         max-height: 100%;
     }
     .catering{
-        margin: 7% 0;
+        display: flex;
+        flex-flow: column;
     }
+
+    #catering-link{
+        margin: 1% 0;
+    }
+    
 }
 
 /* style calender */
@@ -116,12 +122,12 @@ img{
     margin: 4% 0;
 }
 #catering-link{
+    width: 50%;
     text-decoration: none;
     border-radius: 24px;
     padding: 14px;
     color:white;
     background-color: rebeccapurple ;
-
 }
 footer{
     padding: 1%;
