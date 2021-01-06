@@ -1,3 +1,6 @@
+*{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0 0 0 0;
     box-sizing: border-box;
@@ -63,6 +66,10 @@ main{
 .food-list{
     text-align: left;
 }
+.food-list:last-child{
+    margin-top: 5%;
+    list-style-type: none;
+}
 img{
     object-fit: contain;
     max-width: initial;
@@ -83,9 +90,14 @@ img{
     #catering-link{
         margin: 1% 0;
     }
+    .food-list:last-child{
+        margin-top: 3%;
+    }
     
 }
-
+.menu-info.center{
+    align-self: start;
+}
 /* style calender */
 
 .cal-container{
