@@ -1,6 +1,9 @@
 *{
     scroll-behavior: smooth;
 }
+h1{
+    color:#FFF;
+}
 body{
     margin: 0 0 0 0;
     box-sizing: border-box;
@@ -27,6 +30,9 @@ main{
     }
     .col-2 , .col-3{
         grid-column: 1;
+    }
+    .col-3{
+        text-align: center;
     }
     .mySlider{
         height: 100vh;
@@ -75,6 +81,10 @@ img{
     max-width: initial;
     max-height: 100%;
     
+}
+li img{
+    width:100%;
+    max-height: max-content;
 }
 
 @media only screen and (max-width: 830px){

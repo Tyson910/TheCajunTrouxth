@@ -6,14 +6,13 @@
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.min.css" />
+    <script src="../node_modules/uikit/dist/js/uikit-icons.min.js"></script>
+    <script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
     <link href="main.css" rel="stylesheet" />
     <link href="grids.css" rel="stylesheet" />
     <link href="nav-bar.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.min.css" />
-    <script src="../node_modules/uikit/dist/js/uikit-icons.min.js"></script>
-    <script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
-
 </head>
 
 <body>
@@ -55,59 +54,66 @@
     <main class="row content">
         <section class='col-3' data-aos="fade-down" data-aos-easing="ease-in-out"
         data-aos-duration="1500">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis enim ut tellus elementum sagittis vitae et leo duis. Felis eget nunc lobortis mattis aliquam faucibus. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Justo laoreet sit amet cursus sit amet. Mi proin sed libero enim. Blandit massa enim nec dui nunc mattis. Arcu bibendum at varius vel pharetra vel turpis nunc. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Tortor vitae purus faucibus ornare suspendisse sed. Tincidunt praesent semper feugiat nibh sed. Neque egestas congue quisque egestas diam in. Enim sed faucibus turpis in eu mi bibendum neque.</p>
+            <h2>About Us</h2>
+            <p><em>"The Cajun Trouxth"</em> is a local food truck offering traditional New Orleans' fare like, savory Gumbo and Po' Boys made to perfection. Follow us to get your taste of Cajun in the Central Arkansas area!</p>
+            <svg height="10" width="900">
+                <line x1="900" y1="0"  style="stroke:#333;stroke-width:2" />
+              </svg>
         </section>
 
-        <section class="mySlider col-2" id='slider-container' data-aos="fade-down" data-aos-easing="ease-in-out"
-        data-aos-duration="1500">
-            <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
-            <input type="radio" name="slider" class="slide-radio2" id="slider_2">
 
-            <div class="slider-pagination">
-                <label for="slider_1" class="page1"></label>
-                <label for="slider_2" class="page2"></label>
+        <section class="col-2" id='slider-container' uk-slideshow="animation: fade" >
+
+            <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" id="slideshow" uk-slideshow="animation: fade">
+        
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img src="../node_modules/uikit/tests/images/photo.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="pic_1.jpg" alt="" uk-cover>
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                            <h3 class="uk-margin-remove">Gator Bites</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../node_modules/uikit/tests/images/light.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="pic_2.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="../node_modules/uikit/tests/images/size-v.jpg" alt="" uk-cover>
+                    </li>
+                </ul>
+        
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover " href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
             </div>
-
-            <div class="next control">
-                <label for="slider_1" class="numb1"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/>
-                </svg> </label>
-                <label for="slider_2" class="numb2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/>
-                </svg> </label>
-            </div>
-
-            <div class="previous control">
-                <label for="slider_1" class="numb1"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M213.7 256L380.9 81.9c4.2-4.3 4.1-11.4-.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1-.1 3 .9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-.2l29.9-30.6c4.3-4.4 4.4-11.5.2-15.8L213.7 256z"/>
-                </svg> </label>
-                <label for="slider_2" class="numb2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M213.7 256L380.9 81.9c4.2-4.3 4.1-11.4-.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1-.1 3 .9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-.2l29.9-30.6c4.3-4.4 4.4-11.5.2-15.8L213.7 256z"/>
-                </svg> </label>
-            </div>
-
-            <div class="slider slide_img_01"></div>
-            <div class="slider slide_img_02"></div>
+        
+            <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        
         </section>
+
     
         <section class="center menu-info" data-aos="fade-down" data-aos-easing="ease-in-out"
         data-aos-duration="1500">
-            <h2> We offer a rotating menu </h2>
+            <h2> We offer a rotating menu</h2>
             <ul>
-                <li class='food-list'> Fresh catfish</li>
+                <li class='food-list'> Fresh Catfish</li>
                 <li class='food-list'>Red Beans & Rice</li>
                 <li class='food-list'>Pasta</li>
                 <li class='food-list'>Gumbo</li>
-                <li class='food-list'>And More!!</li>
+                <li class='food-list'>And more!!</li>
             </ul>
         </section>
 
         
-        <section class="col-3 cal-container" id='calendar' data-aos="fade-down" data-aos-easing="ease-in-out"
-        data-aos-duration="1500">
-                <h2 class="center">Upcoming Schedule</h2>
-                <p>We make regular apperances at various locations in the Little Rock metro
+        <section class="col-3 cal-container " id='calendar' data-aos="fade-down" data-aos-easing="ease-in-out"
+        data-aos-duration="900" >
+                <h2 class="center uk-card-title">Upcoming Schedule</h2>
+                <p><em>The Cajun Trouxth</em> make regular apperances at various locations in the Little Rock metro area.
                     
                 </p>
                 <div style="--aspect-ratio: 16/9;">
@@ -120,15 +126,16 @@
             <h2 class='margin-tb'>We also offer catering to events</h2>
             <a class='link-btn center' id='catering-link' href='catering.html'>Schedule an Event</a>
             <p class='margin-tb'>We are able & fully equipped to prepare foods and deliver to the desired location or venue, while we also have the ability to prepare foods on site if it so desired or preferred by the client.</p> 
+            <p class='margin-tb'>Martha's Bon Appetit Catering is a full service food provider for any event you may be hosting. Contact us for a consultation to create your custom menu. We guarantee food and service "In The Spirit of Excellence"</p>
         </section>
     </main>
     
     <footer class='center' id='footer'>
         <div class="col-3">
             <h1>Contact Us</h1>
-            <p>here is our email</p>
-            <p>here is our phone number </p> 
-            <p>here is our IG </p>
+            <p>marthasbonappetit@gmail.com</p>
+            <p>(901) 335-8919 </p> 
+            <p><a href='Instagram.com/TheCajunTrouxth'>Vist Us on IG @TheCajunTrouxth</a></p>
         </div>
     </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
