@@ -24,6 +24,11 @@ main{
     grid-column: span 3 / auto;
 }
 
+#AboutUs{
+    margin-top: 6vh;
+}   
+
+
 @media only screen and (max-width: 830px) {
     main{
         grid-template-columns: 1fr;
@@ -40,6 +45,9 @@ main{
     .menu-info.center{
         justify-self: initial;
     }
+    #AboutUs{
+        margin-top: 0;
+    }  
 
 }
 
@@ -111,6 +119,7 @@ svg{
     }
     
 }
+
 .menu-info.center{
     align-self: start;
 }
@@ -119,6 +128,7 @@ svg{
 .cal-container{
     margin:2% 0;
 }
+
 [style*="--aspect-ratio"] > :first-child {
     width: 100%;
   }
@@ -141,6 +151,7 @@ svg{
       height: 100%;
     }
 }  
+
 .center{
     text-align: center;
     justify-self: center;
@@ -148,6 +159,9 @@ svg{
 }
 .margin-tb{
     margin: 4% 0;
+}
+.catering{
+    margin-bottom: 15vh;
 }
 #catering-link{
     width: 50%;
@@ -157,9 +171,30 @@ svg{
     color:white;
     background-color: rebeccapurple ;
 }
+/*footer and contact Us styles*/
 footer{
     padding: 1%;
     background-color: #333;
     color: whitesmoke;
     width: 100%;
+    display:inline-flex;
+    justify-content: center;
+}
+.svg-logo{
+    margin:0;
+}
+
+.hover-grow:hover{
+    transform: scale(1.02);
+}
+footer a, footer a:hover{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.uk-flex-column p{
+    margin: 0;
+}
+.col-3 div{
+    margin-bottom: 10%;
 }
