@@ -87,6 +87,12 @@ li img{
     max-height: max-content;
 }
 
+.uk-overlay {
+    padding: 14px 30px;
+  }
+svg{
+    margin: 3% 0 10%;
+}
 @media only screen and (max-width: 830px){
     img{
         max-width: 100%;
