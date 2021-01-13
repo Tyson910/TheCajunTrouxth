@@ -1,0 +1,86 @@
+{
+    "catering-items": [
+
+        {"food-group": "starter",
+            "food-name": "Southwest Egg Rolls",
+            "price": 2},
+
+        {"food-group": "starter",
+            "food-name": "Mozzarella Sticks",
+            "price": 2},
+    
+        {"food-group": "starter",
+            "food-name": "Nacho Bar",
+            "price": 5},
+        
+        {"food-group": "starter",
+            "food-name": "BBQ Chicken Cheese Dip",
+            "price": 6} ,
+
+        {"food-group": "starter",
+            "food-name": "Spinach Artichoke Dip",
+            "price": 6.50},
+
+        {"food-group": "starter",
+            "food-name": "Spicy Bean & Cheese Dip",
+            "price": 4},
+        
+        {"food-group": "starter",
+            "food-name": "Parmesan Marinated Vegetables",
+            "price": 2},
+
+        {"food-group": "starter",
+            "food-name": "Fruit Platter",
+            "price": 2.50},
+        
+        {"food-group": "starter",
+            "food-name": "Chicken Wings",
+            "price": 4},
+        
+        {"food-group": "starter",
+            "food-name": "Meatballs",
+            "price": 2.50},
+
+        {"food-group": "starter",
+            "food-name": "Meatball Sub",
+            "price": 3},
+        
+        {"food-group": "starter",
+            "food-name": "Chicken Salad Croissant",
+            "price": 3},
+        
+        {"food-group": "starter",
+            "food-name": "Pulled Pork Sliders",
+            "price": 3.50},
+        
+        {"food-group": "starter",
+            "food-name": "Honey Ham & Swiss Sliders",
+            "price": 2.50},
+    
+        {"food-group": "starter",
+            "food-name": "Meat Tray",
+            "price": 3.50},
+
+        {"food-group": "starter",
+            "food-name": "Cheese Tray",
+            "price": 3.50},
+        
+        {"food-group": "starter",
+            "food-name": "Street Tacos",
+            "price": 2.50},
+        
+        {"food-group": "starter",
+            "food-name": "Beef Medallions",
+            "price": 5},
+    
+        {"food-group": "starter",
+            "food-name": "Pork Medallions",
+            "price": 4},
+        
+        {"food-group": "starter",
+            "food-name": "Zesty Italian Shrimp",
+            "price": 8}
+    ]
+
+}
+
