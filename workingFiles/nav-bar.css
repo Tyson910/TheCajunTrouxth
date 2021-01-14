@@ -134,6 +134,7 @@
   body{
     color: #333;
     background: white;
+    background: url("dark-wood.jpg");
     font-family: "Cardo", serif;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
@@ -163,6 +164,7 @@
   .hero {
     position: relative;
     background: #333 ;
+    background: ghostwhite;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
