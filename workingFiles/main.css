@@ -63,10 +63,20 @@ main{
 .landing-links{
     margin: 2%;
     text-align: center;
-    padding: 24px;
-    color:whitesmoke;
-    background-color: rebeccapurple;
+    padding: 25px;
+    color: ghostwhite;
+    background: linear-gradient(180deg, rgba(156,0,176,1) 0%, rgba(105,35,146,1) 65%, rgba(84,40,126,1) 100%);
+    border: 2px #333 solid;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(224,255,79, .25);
 }
+
+/*
+clicked
+.landing-links:hover{
+    background: linear-gradient(0deg, rgba(156,0,176,1) 0%, rgba(105,35,146,1) 65%, rgba(84,40,126,1) 100%);
+}
+*/
 
 @media only screen and (max-width: 750px){
     .links-flex{
@@ -78,7 +88,9 @@ main{
         margin-right: 15%;
         margin-bottom: 5%;
     }
-
+    .hero {
+        padding-top: 10%;
+    }
 }
 /*
 #slideshow{
@@ -181,14 +193,15 @@ svg{
     text-decoration: none;
     border-radius: 24px;
     padding: 14px;
-    color:white;
-    background-color: rebeccapurple ;
+    color:ghostwhite;
+    background: linear-gradient(180deg, rgba(156,0,176,1) 0%, rgba(105,35,146,1) 65%, rgba(84,40,126,1) 100%);
+    border: 2px #333 solid;
 }
 /*footer and contact Us styles*/
 footer{
     padding: 1%;
     background-color: #333;
-    color: whitesmoke;
+    color: ghostwhite;
     width: 100%;
     display:inline-flex;
     justify-content: center;
