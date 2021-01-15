@@ -11,44 +11,42 @@
     <script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
     <link href="nav-bar.css" rel="stylesheet" />
     <link href="main.css" rel="stylesheet" />
+    <link href='top-nav.css' rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-<header class="main_h">
-    <div class="row">
-        <a class="logo" href="#top">Home</a>
+    <header class="topnav row sticky" id="myTopnav">
+        <a href="#home" class="active" >Home</a>
+        <a href="#calendar" >Schedule</a>
+        <a href="#footer" >Contact</a>
+        <a href="#catering-link" >Catering</a>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+          &#9776;
+        </a>
+      </header>
 
-        <div class="mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div id="myNav" class="overlay row sticky">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#home"  onclick="closeNav()">Home</a>
+            <a href="#calendar" onclick="closeNav()">Schedule</a>
+            <a href="#footer" onclick="closeNav()">Contact</a>
+            <a href="#catering-link" onclick="closeNav()">Catering</a>
         </div>
+      </div>
 
-        <nav>
-            <ul>
-                <li><a href="#AboutUs">Food Truck</a></li>
-                <li><a href=".cal-container">Schedule</a></li>
-                <li><a href=".catering">Catering</a></li>
-                <li><a href="footer">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="hero row ">
 
-    </div> 
+            <img src="logo-removebg-preview.png" alt="The Cajun Trouxth Logo" />
 
-</header>
-
-<div class="hero row ">
-
-    <img src="logo-removebg-preview.png" alt="The Cajun Trouxth Logo" />
-
-    <div class='links-flex'>
-        <a class='landing-links hover-grow' href="#calendar"> Locations </a>
-        <a class='landing-links hover-grow' href="#catering-link"> Catering </a>
-        <a class='landing-links hover-grow' href="#footer"> Contact </a>
-    </div>
-    
-</div>
+            <div class='links-flex'>
+                <a class='landing-links hover-grow' href="#calendar"> Locations </a>
+                <a class='landing-links hover-grow' href="#catering-link"> Catering </a>
+                <a class='landing-links hover-grow' href="#footer"> Contact </a>
+            </div>
+            
+        </div>
 
     <main class="row content">
         <section class='col-3 center' id='AboutUs'data-aos="fade-down" data-aos-easing="ease-in-out"
@@ -203,6 +201,10 @@
 
         </div>
     </footer>
+<script>
+function openNav() {document.getElementById("myNav").style.height = "100%";}
+function closeNav() {document.getElementById("myNav").style.height = "0%";}
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src='../index.js'></script>
