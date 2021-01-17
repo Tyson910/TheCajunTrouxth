@@ -5,8 +5,6 @@ body {
 	flex-flow: column
 }
 
-
-
 .form-style-10{
 	width:450px;
 	padding:30px;
@@ -124,4 +122,10 @@ footer {
 	background-color: #333;
 	color: whitesmoke;
 	width: 100%
+}
+
+.flex-reverse-end{
+	display: flex;
+	flex-flow: row-reverse;
+	justify-content: flex-end;
 }

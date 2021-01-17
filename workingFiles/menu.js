@@ -1,5 +1,5 @@
 const Menu = {
-    starters: [
+    Starters: [
 
         {"dish": "Southwest Egg Rolls",
             "price": 2},
@@ -14,7 +14,7 @@ const Menu = {
             "price": 6} ,
 
         {"dish": "Spinach Artichoke Dip",
-            "price": 6.50},
+            "price": '6.50'},
 
         {"dish": "Spicy Bean & Cheese Dip",
             "price": 4},
@@ -23,14 +23,21 @@ const Menu = {
             "price": 2},
 
         {"dish": "Fruit Platter",
-            "price": 2.50},
+            "price": '2.50'},
         
         {"dish": "Chicken Wings",
             "price": 4},
         
-        {"dish": "Meatballs",
-            "price": 2.50,
-            "options": ["Swedish", "Sweet Chili", "Honey Gold BBQ"]
+        {"dish": "Swedish Meatballs",
+            "price": '2.50'
+        },
+
+        {"dish": "Sweet Chili Meatballs",
+        "price": '2.50'
+        },
+
+        {"dish": "Honey Gold BBQ Meatballs",
+        "price": '2.50'
         },
 
         {"dish": "Meatball Sub",
@@ -40,19 +47,19 @@ const Menu = {
             "price": 3},
         
         {"dish": "Pulled Pork Sliders",
-            "price": 3.50},
+            "price": '3.50'},
         
         {"dish": "Honey Ham & Swiss Sliders",
-            "price": 2.50},
+            "price": '2.50'},
     
         {"dish": "Meat Tray",
-            "price": 3.50},
+            "price": '3.50'},
 
         {"dish": "Cheese Tray",
-            "price": 3.50},
+            "price": '3.50'},
         
         {"dish": "Street Tacos",
-            "price": 2.50},
+            "price": '2.50'},
         
         {"dish": "Beef Medallions",
             "price": 5},
@@ -69,7 +76,7 @@ const Menu = {
             "price": 11},
 
         { "dish": "Red Beans w/ Andouuille Sausage",
-            "price": 9.5},
+            "price": '9.50'},
         
         { "dish": "Shrimp Etouffee",
             "price": 11},
@@ -78,7 +85,7 @@ const Menu = {
             "price": 9},
 
         { "dish": "Salisbury Meatballs",
-            "price": 9.50},
+            "price": '9.50'},
         
         { "dish": "Jamaican Curry Shrimp",
             "price": 11},
@@ -95,10 +102,10 @@ const Menu = {
             "price": 12},
 
         { "dish": "Hamburger Steaks",
-            "price": 8.50},
+            "price": '8.50'},
         
         { "dish": "Pulled Beef",
-            "price": 10.50},
+            "price": '1.50'},
         
         { "dish": "Beef Tenderloin",
             "price": 16},
@@ -113,7 +120,7 @@ const Menu = {
             "price": 11},
 
         { "dish": "Pulled Pork",
-            "price": 9.50},
+            "price": '9.50'},
 
         { "dish": "Fried Chicken",
             "price": 9},
@@ -148,16 +155,16 @@ const Menu = {
         "price": 9},
 
         {"dish": "Chicken Alfredo Lasagna",
-        "price": 10.50},
+        "price": '1.50'},
 
         {"dish": "Spaghetti",
-        "price": 8.50},
+        "price": '8.50'},
 
         {"dish": "Cajun Jambalaya Alfredo Pasta",
         "price": 10},
 
         {"dish": "Chicken Alfredo Pasta",
-        "price": 9.50},
+        "price": '9.50'},
 
         {"dish": "Jambalaya",
         "price": 10}
@@ -165,81 +172,114 @@ const Menu = {
     ],
 
     Sides : [
-        {"dish": "Mashed Potatoes"},
+        {"dish": "Mashed Potatoes",
+        "price" : '1.50'},
 
-        {"dish": "Roasted Potatoes"}, 
+        {"dish": "Roasted Potatoes",
+        "price" : '1.50'}, 
 
-        {"dish": "Rice"},
+        {"dish": "Rice",
+        "price" : '1.50'},
 
-        {"dish": "Cheesy Wild Rice"},
+        {"dish": "Cheesy Wild Rice",
+        "price" : '1.50'},
 
-        {"dish": "Mac & Cheese"},
+        {"dish": "Mac & Cheese",
+        "price" : '1.50'},
 
-        {"dish":"Green Beans"},
+        {"dish":"Green Beans",
+        "price" : '1.50'},
 
-        {"dish": "Corn"},
+        {"dish": "Corn",
+        "price" : '1.50'},
 
-        {"dish": "Mixed Vegetables"},
+        {"dish": "Mixed Vegetables",
+        "price" : '1.50'},
 
-        {"dish": "Sweet Potatoes"},
+        {"dish": "Sweet Potatoes",
+        "price" : '1.50'},
 
-        {"dish": "Corn Bread Dressing"},
+        {"dish": "Corn Bread Dressing",
+        "price" : '1.50'},
 
-        {"dish": "Hash Brown Casserole"},
+        {"dish": "Hash Brown Casserole",
+        "price" : '1.50'},
 
-        {"dish": "Baked Beans"},
+        {"dish": "Baked Beans",
+        "price" : '1.50'},
 
-        {"dish": "Broccoli"},
+        {"dish": "Broccoli",
+        "price" : '1.50'},
 
-        {"dish": "Broccoli w/ cheese"},
+        {"dish": "Broccoli w/ cheese",
+        "price" : '1.50'},
 
-        {"dish": "Glazed Carrots"},
+        {"dish": "Glazed Carrots",
+        "price" : '1.50'},
 
-        {"dish": "Collard Greens"}
+        {"dish": "Collard Greens",
+        "price" : '1.50'}
     ],
 
     Salads: [
-        {"dish": "Tossed Salads"},
+        {"dish": "Tossed Salads",
+        "price" : 5},
 
-        {"dish": "Chef Salad"},
+        {"dish": "Chef Salad",
+        "price" : 5},
 
-        {"dish": "Caesar Salad"},
+        {"dish": "Caesar Salad",
+        "price" : 5},
 
-        {"dish": "Chicken Salad"}
+        {"dish": "Chicken Salad",
+        "price" : 5}
     ],
 
     Soups: [
-        { "dish":"Vegetable Soup"},
+        { "dish":"Vegetable Soup",
+        "price" : 5},
 
-        {"dish": "Loaded Potato Soup"},
+        {"dish": "Loaded Potato Soup",
+        "price" : 5},
 
-        {"dish": "Taco Soup"},
+        {"dish": "Taco Soup",
+        "price" : 5},
 
-        {"dish": "Chicken Soup"}
+        {"dish": "Chicken Soup",
+        "price" : 5},
+
+        {"dish":"Beef Stew",
+        "price" : 5},
+
+        {"dish": "Chicken & Sausage Gumbo",
+        "price" : 5}
     ],
 
-    Stews: [
-        {"dish":"Beef Stew"},
-
-        {"dish": "Chicken & Sausage Gumbo"}
-    ], 
 
     Drinks: [
-        {"dish": "Martha's Raspberry Sweet Tea"},
+        {"dish": "Martha's Raspberry Sweet Tea",
+        "price" : 8},
 
-        {"dish": "Artesian Tea"},
+        {"dish": "Artesian Tea",
+        "price" : 8},
 
-        {"dish": "Sweet Tea"},
+        {"dish": "Sweet Tea",
+        "price" : 8},
 
-        {"dish": "Unsweetened Tea"},
+        {"dish": "Unsweetened Tea",
+        "price" : 8},
 
-        {"dish": "Water"},
+        {"dish": "Water",
+        "price" : 8},
 
-        {"dish": "Soft Drinks"},
+        {"dish": "Soft Drinks",
+        "price" : 8},
 
-        {"dish": "Lemonade"},
+        {"dish": "Lemonade",
+        "price" : 8},
 
-        {"dish": "Fruit Punch"}
+        {"dish": "Fruit Punch",
+        "price" : 8}
     ],
 
     Desserts: [
@@ -252,15 +292,16 @@ const Menu = {
         {"dish": "Brownie Cake (Single Serving)",
         "price": 2}, 
 
-        {"dish": "Peach Cobbler (Half Pan)", 
-        "price": 25},
-
-        {"dish": "Peach Cobbler (Full Pan)", 
-        "price": 50},
-
         {"dish": "Apple Cobbler (Half Pan)", 
         "price": 25},
 
+
+        {"dish": "Apple Cobbler (Full Pan)", 
+        "price": 50},
+
+        {"dish": "Peach Cobbler (Half Pan)", 
+        "price": 25},
+        
         {"dish": "Peach Cobbler (Full Pan)", 
         "price": 50},
 
@@ -269,20 +310,26 @@ const Menu = {
     ],
 
     BundtCakes : [
-        {"dish": "Red Velvet Cake"},
+        {"dish": "Red Velvet Cake",
+        "price" : 30},
 
-        {"dish": "Turtle Cake"},
+        {"dish": "Turtle Cake",
+        "price" : 30},
 
-        {"dish": "Lemon Pound Cake"},
+        {"dish": "Lemon Pound Cake",
+        "price" : 30},
 
-        {"dish": "Butter Pound Cake"},
+        {"dish": "Butter Pound Cake",
+        "price" : 30},
 
-        {"dish": "Strawberry Cake"},
+        {"dish": "Strawberry Cake",
+        "price" : 30},
 
-        {"dish": "Coconut Cake"},
+        {"dish": "Coconut Cake",
+        "price" : 30},
 
-        {"dish": "German Chocolate Cake"}
-
+        {"dish": "German Chocolate Cake",
+        "price" : 30}
     ]
 };
 export default Menu;
