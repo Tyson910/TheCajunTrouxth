@@ -124,7 +124,7 @@ footer {
 	width: 100%
 }
 
-.flex-reverse-end{
+.flex-reverse-end, label{
 	display: flex;
 	flex-flow: row-reverse;
 	justify-content: flex-end;

@@ -1,11 +1,20 @@
 import menu from './menu.js';
-
+let cost = 0;
+const eventFood = [ ];
 const menu1 = Object.entries(menu);
 let form = document.getElementsByTagName("form")[0];
 
+let costDisplay = document.createElement("h2");
+costDisplay.className = 'center';
+costDisplay.id = 'costDisplay';
+costDisplay.textContent = cost;
+document.getElementById('footer').appendChild(costDisplay);
+
+
+
 for (const [foodTier, foodArray] of menu1) {
     makeHeader(foodTier);
-    foodArray.map( item => makeCheckBox(foodTier, item.dish, item.price))
+    foodArray.map( item => makeCheckBox(foodTier, item.dish, item.price));
 }
 
 function setPriceHeaders(header, h2){
@@ -52,6 +61,9 @@ function makeCheckBox(category, dish, price){
     let label = document.createElement('LABEL');
     label.htmlFor = dish.replace(/\s+/g, '-').toLowerCase();
     label.textContent = dish + ' ' + price;
+    label.style.display = 'flex';
+    label.style.flexFlow = 'row-reverse';
+    label.style.justifyContent = 'flex-end';
     label.className = 'flex-reverse-end'
     label.id = dish.replace(/\s+/g, '-').toLowerCase() + '-label'
     tierHeader.appendChild(label);
@@ -61,10 +73,39 @@ function makeCheckBox(category, dish, price){
     input.type = 'checkbox';   
     input.id = dish.replace(/\s+/g, '-').toLowerCase();
     input.value = price;
-    document.getElementById(dish.replace(/\s+/g, '-').toLowerCase()+'-label').appendChild(input);
+    input.onclick = function(){changeFoodTotal(input.id, price)} ;
+    input.onclick = function(){change_eventFood(input.id, dish)} ;
+    document.getElementById(input.id +'-label').appendChild(input);
 }
-/*
-flex-reverse-end
-*/
+function changeFoodTotal(food, price){
+    let checkBox = document.getElementById(food);
+    if (checkBox.checked){
+    cost = price + cost;    
+  } else {
+    cost = cost - price;
+  }  
+  costDisplay.textContent = cost;
+}
+function change_eventFood(dishID,dish){
+    let checkBox = document.getElementById(dishID);
+    if (checkBox.checked){
+        eventFood.push(dish);
+        // console.log('adding ' + dish + ' to ' + eventFood);
+    }
+    else{
+        let index = eventFood.indexOf(dish);
+        eventFood.splice(index, 1);
+        // console.log('removing ' + dish + ' from ' + eventFood);
+    }
+    // console.log(eventFood);
+}
 
-//let foodSet = foodGroup[i].replace(/^"(.*)"$/, '$1');
+/*
+
+let eventFoodDisplay = document.createElement("h2");
+eventFoodDisplay.className = 'center';
+eventFoodDisplay.id = 'eventFoodDisplay';
+eventFoodDisplay.textContent = eventFood[i];
+document.getElementById('footer').appendChild(eventFoodDisplay);
+
+*/
