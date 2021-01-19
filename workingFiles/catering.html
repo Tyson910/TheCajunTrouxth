@@ -44,31 +44,31 @@
 
                 <div class="section"><span>1</span>Contact Info</div>
                 <div class="inner-wrap">
-                    <label>First Name <input required type="text" name="first-name"/> </label>
-                    <label>Last Name <input required type="text" name="last-name"/> </label>
-                    <label>Phone Number <input required type="tel" name="phoneNum"/> </label>
-                    <label>Email Address <input required type="email" name="email" /></label>
+                    <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
+                    <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
+                    <label>Phone Number <input required type="tel" name="phoneNum" class='contact-input'/> </label>
+                    <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
                 </div>
             
                 <div class="section"><span>2</span>Event Info</div>
                 <div class="inner-wrap">
-                    <label> Event Date <input required type="date" name="event_date" /></label>
-                    <label> Event Address <textarea name="event_address"></textarea></label>
-                    <label> City <input required type="text" name="event_city" /></label>
-                    <label> State <input required type="text" name="event_state" /></label>
-                    <label> Zip Code <input required type="text" name="event_zipCode" /></label>
-                    <label> Guest Estimate <input required type="number" name="guest_count"/> </label>
-                </div>
-            
-                <div class="section"><span>3</span>Additional Comments</div>
-                    <div class="inner-wrap">
-                    <label> Comments <textarea name="event_comments"></textarea></label>
-                </div>
-
-                <div class="button-section">
-                 <input type="submit" name="Sign Up" />
+                    <label> Event Date <input required type="date" name="event_date" class='event-input'/></label>
+                    <label> Event Address <textarea name="event_address" class='event-input'></textarea></label>
+                    <label> City <input required type="text" name="event_city" class='event-input' /></label>
+                    <label> State <input required type="text" name="event_state" class='event-input' /></label>
+                    <label> Zip Code <input required type="text" name="event_zipCode" class='event-input' /></label>
+                    <label> Guest Estimate <input required type="number" name="guest_count" class='event-input'/> </label>
                 </div>
             </form>
+
+                         
+            <div class="section"><span>3</span>Additional Comments</div>
+            <div class="inner-wrap">
+            <label> Comments <textarea name="event_comments"></textarea></label>
+        </div>
+            <div class="button-section">
+                <input type="submit" name="Sign Up" />
+               </div>
             </div>
 
     </main>
