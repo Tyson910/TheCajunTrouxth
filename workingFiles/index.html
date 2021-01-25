@@ -19,8 +19,8 @@
     <header class="topnav row sticky" id="myTopnav">
         <a href="#home" class="active" >Home</a>
         <a href="#calendar" >Schedule</a>
-        <a href="#footer" >Contact</a>
         <a href="#catering-container" >Catering</a>
+        <a href="#footer" >Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="openNav()">
           &#9776;
         </a>
@@ -31,8 +31,8 @@
         <div class="overlay-content">
             <a href="#home"  onclick="closeNav()">Home</a>
             <a href="#calendar" onclick="closeNav()">Schedule</a>
-            <a href="#footer" onclick="closeNav()">Contact</a>
             <a href="#catering-container" onclick="closeNav()">Catering</a>
+            <a href="#footer" onclick="closeNav()">Contact</a>
         </div>
       </div>
 
@@ -87,9 +87,6 @@
                             <h3 class="uk-margin-remove">Cajun Chicken Salad</h3>
                         </div>
                     </li>
-                    <li>
-                        <img src="../node_modules/uikit/tests/images/size-v.jpg" alt="" uk-cover>
-                    </li>
                 </ul>
         
                 <a class="uk-position-center-left uk-position-small uk-hidden-hover " href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
@@ -129,7 +126,7 @@
         <section class="col-3 cal-container" id='calendar' data-aos="fade-down" data-aos-easing="ease-in-out"
         data-aos-duration="900" >
                 <h2 class="center uk-card-title">Upcoming Schedule</h2>
-                <p>The Cajun Trouxth make regular appearances at various locations in the Little Rock metro area.</p>
+                <p class='center'>The Cajun Trouxth make regular appearances at various locations in the Little Rock metro area.</p>
                 <iframe title='Upcoming Locations' class='uk-box-shadow-medium' style="border:solid .5px #777; padding:1%;"  src="https://calendar.google.com/calendar/embed?height=700&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=dHlzb25zLjQxN0BnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Z3VmaDBlcnRuOGhvaWdvaTgzbjlycm00MjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%23D81B60&amp;color=%230B8043&amp;mode=AGENDA&amp;showNav=0&amp;showTitle=1&amp;showDate=0&amp;showTabs=1&amp;showCalendars=0&amp;title=Test%20Calendar" ></iframe>
         </section>
 
@@ -146,7 +143,21 @@
         <section class='center catering col-3 ' data-aos="fade-down" data-aos-easing="ease-in-out"
         data-aos-duration="1500" id="catering-container">
             <h2 class='margin-tb'>We also offer catering to events</h2>
-            <a class='link-btn center margin-tb ' id='catering-link' href='catering.html'>Schedule an Event</a>
+            <button class='link-btn center margin-tb ' id='catering-link' onclick="resiForm()">Schedule an Event</button>
+            
+            <form class='form-style-10'>
+                <div class="inner-wrap">
+                    <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
+                    <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
+                    <label>Phone Number <input required type="tel" name="phoneNum" class='contact-input'/> </label>
+                    <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
+                    <label> Event Date <input required type="date" name="event_date" class='event-input'/></label>
+                    <label> Guest Estimate <input required type="number" name="guest_count" class='event-input'/> </label>
+                    <label> Comments <textarea name="event_comments"></textarea></label>
+                    <input type="submit" name="Sign Up" />
+                </div>
+            </form>
+
             <p class='margin-tb'>Martha's Bon Appetit Catering is a full service food provider for any event you may be hosting. Contact us for a consultation to create your custom menu. We guarantee food and service "In The Spirit of Excellence"</p>
         </section>
     </main>
@@ -206,8 +217,17 @@
 function openNav() {document.getElementById("myNav").style.height = "100%";document.getElementById("myTopnav").style.zIndex = "0";document.getElementById("myTopnav").style.height = "0%";}
 
 function closeNav() {document.getElementById("myNav").style.height = "0%";document.getElementById("myTopnav").style.zIndex = "99";document.getElementById("myTopnav").style.height = "initial";}
+
+function resiForm(){
+    let form = document.querySelector(".form-style-10");
+    if(form.style.display == 'block'){
+        form.style.display = 'none';
+    }
+    else{
+        form.style.display = 'block';
+    }
+}
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src='../index.js'></script>
 </body>
