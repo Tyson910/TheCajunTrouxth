@@ -134,7 +134,7 @@
   body{
     color: #333;
     background: white;
-    background: url("dark-wood.jpg");
+    background: url("wild-sea.png");
     font-family: "Cardo", serif;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
@@ -158,7 +158,7 @@
   
   .hero {
     position: relative;
-    background: ghostwhite;
+    background: linear-gradient(0deg, rgba(248,248,255,1) 0%, rgba(248,248,255,1) 6%, rgba(191,215,234,1) 100%);
     text-align: center;
     padding-top: 10%;
     min-height: 500px;

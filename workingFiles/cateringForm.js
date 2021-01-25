@@ -16,7 +16,6 @@ for (let i=0; i < element.length; i++){
     element2[i].addEventListener('change', function(){saveEventInfo(this.name, this.value)})
 }
 
-
 let costDisplay = document.createElement("h2");
 costDisplay.className = 'center';
 costDisplay.id = 'costDisplay';
@@ -137,6 +136,7 @@ function saveEventInfo(name, value){
     event_info[name] = value;
     console.log(event_info);
 }
+
 /*
 
 let eventFoodDisplay = document.createElement("h2");
