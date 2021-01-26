@@ -3,13 +3,19 @@
 <html lang="en">
 <head>
     <title>The Cajun Trouxth</title>
+    <link rel="icon" type="image/png" href="./logo-removebg-preview.png" sizes="32x32" /> 
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Search Engine -->
+    <meta name="description" content=" 'The Cajun Trouxth' is a local food truck offering traditional New Orleans' fare like, savory Gumbo and Po' Boys made to perfection. Give us a visit to get your taste of Cajun in the Central Arkansas area!">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="The Cajun Trouxth">
+    <meta itemprop="description" content=" 'The Cajun Trouxth' is a local food truck offering traditional New Orleans' fare like, savory Gumbo and Po' Boys made to perfection. Give us a visit to get your taste of Cajun in the Central Arkansas area!">
+
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.min.css" />
     <script src="../node_modules/uikit/dist/js/uikit-icons.min.js"></script>
     <script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
-    <link href="nav-bar.css" rel="stylesheet" />
     <link href="main.css" rel="stylesheet" />
     <link href='top-nav.css' rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -154,7 +160,7 @@
                     <label> Event Date <input required type="date" name="event_date" class='event-input'/></label>
                     <label> Guest Estimate <input required type="number" name="guest_count" class='event-input'/> </label>
                     <label> Comments <textarea name="event_comments"></textarea></label>
-                    <input type="submit" name="Sign Up" />
+                    <button>Submit</button>
                 </div>
             </form>
         </section>
