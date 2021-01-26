@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="nav-bar.css" rel="stylesheet" />
     <link href="forms.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -26,44 +26,52 @@
                     <li><a href="index.html#slider-container">Food Truck</a></li>
                     <li><a href="index.html#container">Schedule</a></li>
                     <li><a href="index.html#catering-link">Catering</a></li>
-                    <li><a href="index.html#footer">Contact Us</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
                 </ul>
             </nav>
         </div> 
     </header>
 
+    <p class='margin-tb'>We are able & fully equipped to prepare foods and deliver to the desired location or venue, while we also have the ability to prepare foods on site if it so desired or preferred by the client.</p> 
     <main>
 
           <div class="form-style-10">
-            <h1>Big Event Coming Soon?<span>Sign up for our Catering Services??</span></h1>
+            <h1>Big Event Coming Soon?
+                <span>Sign up for our Catering Services</span>
+            </h1>
             <form>
+                <div id='js-forms'></div>
+
                 <div class="section"><span>1</span>Contact Info</div>
                 <div class="inner-wrap">
-                    <label>First Name <input required type="text" name="first-name"/> </label>
-                    <label>Last Name <input required type="text" name="last-name"/> </label>
-                    <label>Phone Number <input required type="tel" name="phoneNum"/> </label>
-                    <label>Email Address <input required type="email" name="email" /></label>
+                    <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
+                    <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
+                    <label>Phone Number <input required type="tel" name="phoneNum" class='contact-input'/> </label>
+                    <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
                 </div>
             
                 <div class="section"><span>2</span>Event Info</div>
                 <div class="inner-wrap">
-                    <label> Event Date <input required type="date" name="event_date" /></label>
-                    <label> Event Address <textarea name="event_address"></textarea></label>
-                    <label> City <input required type="text" name="event_city" /></label>
-                    <label> State <input required type="text" name="event_state" /></label>
-                    <label> Zip Code <input required type="text" name="event_zipCode" /></label>
-                    <label> Guest Estimate <input required type="number" name="guest_count"/> </label>
-                </div>
-            
-                <div class="section"><span>3</span>Additional Comments</div>
-                    <div class="inner-wrap">
-                    <label> Comments <textarea name="event_comments"></textarea></label>
-                </div>
+                    <label> Type of Event </label>
 
-                <div class="button-section">
-                 <input type="submit" name="Sign Up" />
+                    <label> Event Date <input required type="date" name="event_date" class='event-input'/></label>
+                    <label> Event Time <input name="event_address" class='event-input' placeholder="optional"/></label>
+                    <label> Event Address <input required name="event_address" class='event-input'/></label>
+                    <label> City <input required type="text" name="event_city" class='event-input' /></label>
+                    <label> State <input required type="text" name="event_state" class='event-input' /></label>
+                    <label> Zip Code <input required type="text" name="event_zipCode" class='event-input' /></label>
+                    <label> Guest Estimate <input required type="number" name="guest_count" class='event-input'/> </label>
                 </div>
             </form>
+
+                         
+            <div class="section"><span>4</span>Additional Comments</div>
+            <div class="inner-wrap">
+            <label> Comments <textarea name="event_comments"></textarea></label>
+        </div>
+            <div class="button-section">
+                <input type="submit" name="Sign Up" />
+               </div>
             </div>
 
     </main>
@@ -79,5 +87,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='nav-scroll.js'></script>
+    <script src='./cateringForm.js' type="module"></script>
 </body>
 </html>

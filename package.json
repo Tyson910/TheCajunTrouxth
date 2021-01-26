@@ -1,0 +1,22 @@
+{
+  "name": "thecajuntrouxth",
+  "version": "1.0.0",
+  "description": "Little Rock, AR food truck and catering company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyson910/TheCajunTrouxth.git"
+  },
+  "author": "Tyson Suttle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tyson910/TheCajunTrouxth/issues"
+  },
+  "homepage": "https://github.com/Tyson910/TheCajunTrouxth#readme",
+  "dependencies": {
+    "uikit": "^3.6.9-dev.c3c6697e7"
+  }
+}

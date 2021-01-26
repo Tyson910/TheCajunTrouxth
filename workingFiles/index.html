@@ -6,112 +6,227 @@
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
-    <link href="styles_long.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.min.css" />
+    <script src="../node_modules/uikit/dist/js/uikit-icons.min.js"></script>
+    <script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
+    <link href="nav-bar.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <link href='top-nav.css' rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-<header class="main_h">
-    <div class="row">
-        <a class="logo" href="#top">Home</a>
+    <header class="topnav row sticky" id="myTopnav">
+        <a href="#home" class="active" >Home</a>
+        <a href="#calendar" >Schedule</a>
+        <a href="#catering-container" >Catering</a>
+        <a href="#footer" >Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+          &#9776;
+        </a>
+      </header>
 
-        <div class="mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div id="myNav" class="overlay row sticky">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#home"  onclick="closeNav()">Home</a>
+            <a href="#calendar" onclick="closeNav()">Schedule</a>
+            <a href="#catering-container" onclick="closeNav()">Catering</a>
+            <a href="#footer" onclick="closeNav()">Contact</a>
+        </div>
+      </div>
+
+        <div class="hero row ">
+
+            <img src="logo-removebg-preview.png" alt="The Cajun Trouxth Logo" />
+
+            <div class='links-flex'>
+                <a class='landing-links hover-grow' href="#calendar"> Locations </a>
+                <a class='landing-links hover-grow' href="#catering-container"> Catering </a>
+                <a class='landing-links hover-grow' href="#footer"> Contact </a>
+            </div>
+            
         </div>
 
-        <nav>
-            <ul>
-                <li><a href=".mySlider">Food Truck</a></li>
-                <li><a href=".cal-container">Schedule</a></li>
-                <li><a href=".catering">Catering</a></li>
-                <li><a href="footer">Contact Us</a></li>
-            </ul>
-        </nav>
-
-    </div> 
-
-</header>
-
-<div class="hero">
-
-    <h1><span>The Cajun Trouxth</span><br>Good food.</h1>
-
-    <div class='links-flex'>
-        <a class='landing-links' href="#slider-container"> Food Truck </a>
-        <a class='landing-links' href="#catering-link"> Catering </a>
-        <a class='landing-links' href="#footer"> Contact </a>
-    </div>
-    
-</div>
-
     <main class="row content">
-        <section class='col-3'>
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis enim ut tellus elementum sagittis vitae et leo duis. Felis eget nunc lobortis mattis aliquam faucibus. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Justo laoreet sit amet cursus sit amet. Mi proin sed libero enim. Blandit massa enim nec dui nunc mattis. Arcu bibendum at varius vel pharetra vel turpis nunc. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Tortor vitae purus faucibus ornare suspendisse sed. Tincidunt praesent semper feugiat nibh sed. Neque egestas congue quisque egestas diam in. Enim sed faucibus turpis in eu mi bibendum neque.</p>
+        <section class='col-3 center' id='AboutUs'data-aos="fade-down" data-aos-easing="ease-in-out"
+        data-aos-duration="1500">
+            <h2>About Us</h2>
+            <p>"The Cajun Trouxth" is a local food truck offering traditional New Orleans' fare like, savory Gumbo and Po' Boys made to perfection.
+            Give us a visit to get your taste of Cajun in the Central Arkansas area!</p>
         </section>
 
-        <section class="mySlider col-2" id='slider-container'>
-            <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
-            <input type="radio" name="slider" class="slide-radio2" id="slider_2">
 
-            <div class="slider-pagination">
-                <label for="slider_1" class="page1"></label>
-                <label for="slider_2" class="page2"></label>
+        <section class="col-2" id='slider-container' uk-slideshow="animation: fade" 
+        data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1500">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light uk-box-shadow-large" tabindex="-1" id="slideshow" uk-slideshow="animation: fade;">
+        
+                <ul class="uk-slideshow-items">
+                    <li>
+                    <img src="pic_8.jpg" style="top:87%" alt="Shrimp and Sausage Gumbo" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                        <h3 class="uk-margin-remove">Shrimp & Sausage Gumbo</h3>
+                    </div>
+                    </li>   
+                    <li>
+                        <img src="pic_3.jpg"  style="top:18%" alt="Catfish and shrimp etoufee over rice" uk-cover>
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                            <h3 class="uk-margin-remove">Down & Dirty</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="pic_5.jpg" alt="Catfish Po'Boys" uk-cover>
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                            <h3 class="uk-margin-remove">Catfish Po'Boys</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="pic_6.jpg" alt="Cajun Chicken Salad" uk-cover>
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                            <h3 class="uk-margin-remove">Cajun Chicken Salad</h3>
+                        </div>
+                    </li>
+                </ul>
+        
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover " href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
             </div>
-
-            <div class="next control">
-                <label for="slider_1" class="numb1"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/>
-                </svg> </label>
-                <label for="slider_2" class="numb2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M298.3 256L131.1 81.9c-4.2-4.3-4.1-11.4.2-15.8l29.9-30.6c4.3-4.4 11.3-4.5 15.5-.2L380.9 248c2.2 2.2 3.2 5.2 3 8.1.1 3-.9 5.9-3 8.1L176.7 476.8c-4.2 4.3-11.2 4.2-15.5-.2L131.3 446c-4.3-4.4-4.4-11.5-.2-15.8L298.3 256z"/>
-                </svg> </label>
-            </div>
-
-            <div class="previous control">
-                <label for="slider_1" class="numb1"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M213.7 256L380.9 81.9c4.2-4.3 4.1-11.4-.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1-.1 3 .9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-.2l29.9-30.6c4.3-4.4 4.4-11.5.2-15.8L213.7 256z"/>
-                </svg> </label>
-                <label for="slider_2" class="numb2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M213.7 256L380.9 81.9c4.2-4.3 4.1-11.4-.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1-.1 3 .9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-.2l29.9-30.6c4.3-4.4 4.4-11.5.2-15.8L213.7 256z"/>
-                </svg> </label>
-            </div>
-
-            <div class="slider slide_img_01"></div>
-            <div class="slider slide_img_02"></div>
+        
+            <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        
         </section>
+
     
-        <section class="center menu-info">
-            <h2> We offer a rotating menu </h2>
-            <ul class='food-list'>
-                <li>Fresh catfish</li>
-                <li>Red Beans & Rice</li>
-                <li>Pasta</li>
-                <li>Gumbo</li>
-                <p>and more!!</p>
+        <section class="center menu-info" data-aos="fade-down" data-aos-easing="ease-in-out"
+        data-aos-duration="1500">
+            <h2> We offer a rotating menu</h2>
+            <ul>
+                <li class='food-list'> Fresh Catfish</li>
+                <li class='food-list'>Red Beans & Rice</li>
+                <li class='food-list'>Pasta</li>
+                <li class='food-list'>Gumbo</li>
+                <li class='food-list'>Corn Bread</li>
+                <li class='food-list'>Shrimp Po'Boy</li>
+                <li class='food-list'>And more!!</li>
             </ul>
         </section>
 
-        <section class="col-3 cal-container" id='calendar' style="--aspect-ratio: 16/9;" >
-                <iframe  title='Food Truck Upcoming Schedule' src="https://calendar.google.com/calendar/embed?height=200&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=dHlzb25zLjQxN0BnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Z3VmaDBlcnRuOGhvaWdvaTgzbjlycm00MjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%23D81B60&amp;color=%230B8043&amp;mode=AGENDA&amp;title=Test&amp;showNav=0&amp;showCalendars=1&amp;showTz=1" ></iframe>  
+        <div class='col-3 center divider' style="width:100%;">
+            <svg height="10" width="45%" class="padding-top-small" >
+                <line x1="100%" y1="0"  style="stroke:#333;stroke-width:2" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 512 512"  height="20" width="20" style="margin: 3% 1% 5%;"><path fill="#fed402" d="M418,384.08c-9.88,18.4-25.82,30.3-41.35,29.35-26.81-1.65-38.12-40.76-39.63-46-13.32-46,12.66-110.88,55.89-119.36,18.65-3.66,40.74,3.38,55.56,18.84,22.78,23.79,17.06,55.68,16.44,58.84,37.68-30.26,49.94-82,30.31-124.1-23.58-50.61-84-59.12-118.43-55.29-45,5-73.19,34.15-77.79,39-44.53,47.34-35.64,114-23.73,203.33,5,37.66,11.16,53.11,23.33,65.42,25,25.24,77.88,39.75,107.4,10.61C425.1,446,429.46,413.78,418,384.08Z"/><path fill="#fac600" d="M362.93 248.09c-43.23 8.48-69.21 73.32-55.89 119.36 1.51 5.22 12.82 44.33 39.63 46a33 33 0 0 0 17.25-4c-17.73-10.41-25.64-37.69-26.88-42-12.85-44.4 10.86-106.28 51.35-118.24A57 57 0 0 0 362.93 248.09zM495.24 201.67c-23.51-50.46-83.68-59.07-118.13-55.32 32.49 3.26 70.56 17.6 88.13 55.32 13.42 28.8 11.93 62.06-2.38 89.9a75 75 0 0 1 2.07 34.2C502.61 295.51 514.87 243.81 495.24 201.67zM394 409.43c1.88 21.42-4.23 41.83-17.93 55.35a55 55 0 0 1-27.84 14.66c20.79 3.84 42.48.5 57.84-14.66 19.08-18.82 23.44-51 12-80.7C411.84 395.59 403.29 404.56 394 409.43z"/><path fill="#fed402" d="M244.27,326.12c-1.34,14.47-3.22,29.7-5.32,45.69q-1.08,8.34-2.24,16.94c-5,37.66-11.16,53.11-23.33,65.42a86,86,0,0,1-19.75,14.61c-27.15,14.88-64.55,18.8-87.65-4-19.08-18.82-23.44-51-12-80.7,9.88,18.4,25.82,30.3,41.35,29.35,26.81-1.65,38.12-40.76,39.63-46,13.32-46-12.66-110.88-55.89-119.36-18.65-3.66-40.74,3.38-55.56,18.84-22.78,23.79-17.06,55.68-16.44,58.84-37.68-30.26-49.94-82-30.31-124.1,23.58-50.61,84-59.12,118.43-55.29a120.87,120.87,0,0,1,29.08,7,133.26,133.26,0,0,1,48.71,32C246.41,221,249.73,267.38,244.27,326.12Z"/><path fill="#fac600" d="M244.27,326.12H192.62L173.57,225a635.21,635.21,0,0,1-9.3-71.61,133.26,133.26,0,0,1,48.71,32C246.41,221,249.73,267.38,244.27,326.12Z"/><path fill="#af66da" d="M289.38,326.12H222.62L203.57,225a634.67,634.67,0,0,1-10.95-117.36h0A110.77,110.77,0,0,1,256,7.5h0a110.77,110.77,0,0,1,63.38,100.12h0A634.67,634.67,0,0,1,308.43,225Z"/><path fill="#9857bd" d="M270.48,15.75h0a110.67,110.67,0,0,1,18.9,61.87h0A634.67,634.67,0,0,1,278.43,195l-11.2,59.47A51.13,51.13,0,0,1,217,296.12h0l5.65,30h66.76L308.43,225a634.67,634.67,0,0,0,10.95-117.36h0A110.75,110.75,0,0,0,270.48,15.75Z"/><path fill="#fac600" d="M239,371.81q-1.08,8.34-2.24,16.94c-5,37.66-11.16,53.11-23.33,65.42a86,86,0,0,1-19.75,14.61,54.82,54.82,0,0,1-8.86-56.36l16.76-40.61Z"/><path fill="#af66da" d="M287.14,470.19,256,504.5l-31.14-34.31a54.82,54.82,0,0,1-10.09-57.77l16.76-40.61h48.94l16.76,40.61A54.82,54.82,0,0,1,287.14,470.19Z"/><path fill="#9857bd" d="M297.23,412.42l-16.76-40.61H231.53l-6.19,15h0A37.54,37.54,0,0,1,260.05,410l7.18,17.38a54.82,54.82,0,0,1-10.09,57.77l-9.33,10.29,8.19,9,31.14-34.31A54.82,54.82,0,0,0,297.23,412.42Z"/><rect width="172" height="65" x="170" y="310.5" fill="#97d729" rx="32.5"/><path fill="#8bc727" d="M309.5,310.5h-2.62A32.29,32.29,0,0,1,312,328h0a32.5,32.5,0,0,1-32.5,32.5H175.12a32.47,32.47,0,0,0,27.38,15h107A32.5,32.5,0,0,0,342,343h0A32.5,32.5,0,0,0,309.5,310.5Z"/></svg>
+            <svg height="10" width="45%" class="padding-top-small" >
+                <line x1="100%" y1="0"  style="stroke:#333;stroke-width:2" />
+            </svg>
+        </div>
+
+        <section class="col-3 cal-container" id='calendar' data-aos="fade-down" data-aos-easing="ease-in-out"
+        data-aos-duration="900" >
+                <h2 class="center uk-card-title">Upcoming Schedule</h2>
+                <p class='center'>The Cajun Trouxth make regular appearances at various locations in the Little Rock metro area.</p>
+                <iframe title='Upcoming Locations' class='uk-box-shadow-medium' style="border:solid .5px #777; padding:1%;"  src="https://calendar.google.com/calendar/embed?height=700&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=dHlzb25zLjQxN0BnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Z3VmaDBlcnRuOGhvaWdvaTgzbjlycm00MjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%23D81B60&amp;color=%230B8043&amp;mode=AGENDA&amp;showNav=0&amp;showTitle=1&amp;showDate=0&amp;showTabs=1&amp;showCalendars=0&amp;title=Test%20Calendar" ></iframe>
         </section>
 
-        <section class='center catering col-3'>
+        <div class='col-3 center divider'>
+            <svg height="10" width="45%" class='small-padding-top' >
+                <line x1="100%" y1="0"  style="stroke:#333;stroke-width:2" />
+              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 512 512"  height="20" width="20"  style="margin: 3% 1% 5%;"><path fill="#fed402" d="M418,384.08c-9.88,18.4-25.82,30.3-41.35,29.35-26.81-1.65-38.12-40.76-39.63-46-13.32-46,12.66-110.88,55.89-119.36,18.65-3.66,40.74,3.38,55.56,18.84,22.78,23.79,17.06,55.68,16.44,58.84,37.68-30.26,49.94-82,30.31-124.1-23.58-50.61-84-59.12-118.43-55.29-45,5-73.19,34.15-77.79,39-44.53,47.34-35.64,114-23.73,203.33,5,37.66,11.16,53.11,23.33,65.42,25,25.24,77.88,39.75,107.4,10.61C425.1,446,429.46,413.78,418,384.08Z"/><path fill="#fac600" d="M362.93 248.09c-43.23 8.48-69.21 73.32-55.89 119.36 1.51 5.22 12.82 44.33 39.63 46a33 33 0 0 0 17.25-4c-17.73-10.41-25.64-37.69-26.88-42-12.85-44.4 10.86-106.28 51.35-118.24A57 57 0 0 0 362.93 248.09zM495.24 201.67c-23.51-50.46-83.68-59.07-118.13-55.32 32.49 3.26 70.56 17.6 88.13 55.32 13.42 28.8 11.93 62.06-2.38 89.9a75 75 0 0 1 2.07 34.2C502.61 295.51 514.87 243.81 495.24 201.67zM394 409.43c1.88 21.42-4.23 41.83-17.93 55.35a55 55 0 0 1-27.84 14.66c20.79 3.84 42.48.5 57.84-14.66 19.08-18.82 23.44-51 12-80.7C411.84 395.59 403.29 404.56 394 409.43z"/><path fill="#fed402" d="M244.27,326.12c-1.34,14.47-3.22,29.7-5.32,45.69q-1.08,8.34-2.24,16.94c-5,37.66-11.16,53.11-23.33,65.42a86,86,0,0,1-19.75,14.61c-27.15,14.88-64.55,18.8-87.65-4-19.08-18.82-23.44-51-12-80.7,9.88,18.4,25.82,30.3,41.35,29.35,26.81-1.65,38.12-40.76,39.63-46,13.32-46-12.66-110.88-55.89-119.36-18.65-3.66-40.74,3.38-55.56,18.84-22.78,23.79-17.06,55.68-16.44,58.84-37.68-30.26-49.94-82-30.31-124.1,23.58-50.61,84-59.12,118.43-55.29a120.87,120.87,0,0,1,29.08,7,133.26,133.26,0,0,1,48.71,32C246.41,221,249.73,267.38,244.27,326.12Z"/><path fill="#fac600" d="M244.27,326.12H192.62L173.57,225a635.21,635.21,0,0,1-9.3-71.61,133.26,133.26,0,0,1,48.71,32C246.41,221,249.73,267.38,244.27,326.12Z"/><path fill="#af66da" d="M289.38,326.12H222.62L203.57,225a634.67,634.67,0,0,1-10.95-117.36h0A110.77,110.77,0,0,1,256,7.5h0a110.77,110.77,0,0,1,63.38,100.12h0A634.67,634.67,0,0,1,308.43,225Z"/><path fill="#9857bd" d="M270.48,15.75h0a110.67,110.67,0,0,1,18.9,61.87h0A634.67,634.67,0,0,1,278.43,195l-11.2,59.47A51.13,51.13,0,0,1,217,296.12h0l5.65,30h66.76L308.43,225a634.67,634.67,0,0,0,10.95-117.36h0A110.75,110.75,0,0,0,270.48,15.75Z"/><path fill="#fac600" d="M239,371.81q-1.08,8.34-2.24,16.94c-5,37.66-11.16,53.11-23.33,65.42a86,86,0,0,1-19.75,14.61,54.82,54.82,0,0,1-8.86-56.36l16.76-40.61Z"/><path fill="#af66da" d="M287.14,470.19,256,504.5l-31.14-34.31a54.82,54.82,0,0,1-10.09-57.77l16.76-40.61h48.94l16.76,40.61A54.82,54.82,0,0,1,287.14,470.19Z"/><path fill="#9857bd" d="M297.23,412.42l-16.76-40.61H231.53l-6.19,15h0A37.54,37.54,0,0,1,260.05,410l7.18,17.38a54.82,54.82,0,0,1-10.09,57.77l-9.33,10.29,8.19,9,31.14-34.31A54.82,54.82,0,0,0,297.23,412.42Z"/><rect width="172" height="65" x="170" y="310.5" fill="#97d729" rx="32.5"/><path fill="#8bc727" d="M309.5,310.5h-2.62A32.29,32.29,0,0,1,312,328h0a32.5,32.5,0,0,1-32.5,32.5H175.12a32.47,32.47,0,0,0,27.38,15h107A32.5,32.5,0,0,0,342,343h0A32.5,32.5,0,0,0,309.5,310.5Z"/></svg>
+            <svg height="10" width="45%" class="padding-top-small" >
+                <line x1="100%" y1="0"  style="stroke:#333;stroke-width:2" />
+              </svg>
+        </div>
+
+        <section class='center catering col-3 ' data-aos="fade-down" data-aos-easing="ease-in-out"
+        data-aos-duration="1500" id="catering-container">
             <h2 class='margin-tb'>We also offer catering to events</h2>
-            <a class='link-btn' id='catering-link' href='catering.html'>Click Here to Schedule an Event</a>
-            <p class='margin-tb'>We are able & fully equipped to prepare foods and deliver to the desired location or venue, while we also have the ability to prepare foods on site if it so desired or preferred by the client.</p> 
+            <p class='margin-tb'>Martha's Bon Appetit Catering is a full service food provider for any event you may be hosting. Contact us for a consultation to create your custom menu. We guarantee food and service "In The Spirit of Excellence"</p>
+            <button class='link-btn center margin-tb hover-grow'  onclick="resiForm()">Schedule an Event</button>            
+            <form class='form-style-10' style="display:none;" >
+                <div class="inner-wrap">
+                    <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
+                    <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
+                    <label>Phone Number <input required type="tel" name="phoneNum" class='contact-input'/> </label>
+                    <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
+                    <label> Event Date <input required type="date" name="event_date" class='event-input'/></label>
+                    <label> Guest Estimate <input required type="number" name="guest_count" class='event-input'/> </label>
+                    <label> Comments <textarea name="event_comments"></textarea></label>
+                    <input type="submit" name="Sign Up" />
+                </div>
+            </form>
         </section>
     </main>
     
-    <footer class='center' id='footer'>
+    <footer class='center row' id='footer'>
         <div class="col-3">
-            <h1>Contact Us</h1>
-            <p>here is our email here is our phone number here is our IG </p>
+            <h2 id='footer-heading'>Contact Us</h2>
+
+                <div class='hover-grow'>
+                    <a href='mailto:marthasbonappetit@gmail.com' class='uk-flex-column center margin-tb'>
+                        <svg xmlns="http://www.w3.org/2000/svg" role='img' width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class='svg-logo'><title>Email icon</title>
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                        </svg>
+                        <p>MarthasBonAppetit@gmail.com</p>
+                    </a>
+                </div>
+        
+                <div class='hover-grow'>
+                    <a href='tel:9013358919' class="uk-flex-column center margin-tb">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" fill="currentColor"  viewBox="0 0 24 24" class='svg-logo'>
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                          </svg>
+                          <p>(901) 335-8919 </p>
+                       </a> 
+                </div>
+
+                <div class='hover-grow'>
+                    <a href='https://Instagram.com/TheCajunTrouxth'>
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" height='24px' fill='url(#Gradient1)' width='24px' class='svg-logo' ><title>Instagram icon</title>
+                            <defs>
+                                <linearGradient id="Gradient1" x1="0" x2="1" y1="0" y2="1">
+                                  <stop class="stop1" stop-color='#405de6' offset="0%"/>
+                                  <stop class="stop2" stop-color='#5851db' offset="20%"/>
+                                  <stop class="stop3" stop-color='#833ab4' offset="40%"/>
+                                  <stop class="stop4" stop-color='#c13584' offset="60%"/>
+                                  <stop class="stop5" stop-color='#e1306c'offset="80%"/>
+                                  <stop class="stop6" stop-color='#fd1d1d' offset="100%"/>
+                                </linearGradient>
+                            </defs>
+                            <path  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        <p>@TheCajunTrouxth</p>
+                    </a>
+                </div>
+
+                <div class='hover-grow'>
+                    <a href='https://www.facebook.com/Cajun-Trouxth-590818461608506/' >
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" height='24px' width='24px' fill="#3b5998" class='svg-logo' style="background: white;border-radius: 50%;"><title>Facebook icon</title>    
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <p>Visit Us on Facebook!</p>
+                    </a>                   
+                </div>
+
+
         </div>
     </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src='index.js'></script>
+<script>
+function openNav() {document.getElementById("myNav").style.height = "100%";document.getElementById("myTopnav").style.zIndex = "0";document.getElementById("myTopnav").style.height = "0%";}
 
+function closeNav() {document.getElementById("myNav").style.height = "0%";document.getElementById("myTopnav").style.zIndex = "99";document.getElementById("myTopnav").style.height = "initial";}
+
+function resiForm(){
+    let form = document.querySelector(".form-style-10");
+    if(form.style.display == 'block'){
+        form.style.display = 'none';
+    }
+    else{
+        form.style.display = 'block';
+    }
+}
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src='../index.js'></script>
 </body>
 </html>
