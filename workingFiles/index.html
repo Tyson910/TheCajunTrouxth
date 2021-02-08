@@ -55,6 +55,9 @@
         </div>
 
     <main class="row content">
+        <button  id='scroll-top' onclick="topFunction()">
+            &uarr;
+        </button>
         <section class='col-3 center' id='AboutUs'data-aos="fade-down" data-aos-easing="ease-in-out"
         data-aos-duration="1500">
             <h2>About Us</h2>
@@ -231,6 +234,26 @@ function resiForm(){
         form.style.display = 'block';
     }
 }
+//Get the button:
+mybutton = document.getElementById("scroll-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src='../index.js'></script>

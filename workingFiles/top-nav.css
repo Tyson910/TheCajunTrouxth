@@ -23,6 +23,8 @@ used to create nav menu overlay on mobile devices
   .topnav {
     overflow: hidden;
     background-color: #333;
+    opacity: .97;
+    border-bottom: 1px solid gainsboro;
   }
   
   .topnav a {
