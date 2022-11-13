@@ -1,0 +1,23 @@
+---
+import type { navigationLink } from "@layouts/Layout.astro";
+export interface Props {
+  navigationLinks: navigationLink[];
+}
+
+const { navigationLinks } = Astro.props;
+---
+
+<header
+  class={`py-2 w-full sticky top-0 z-20
+     shadow-md lg:shadow-sm text-purple-100 bg-purple-shade-4`}
+>
+  <nav class="max-w-screen-xl mx-auto flex justify-evenly">
+    {
+      navigationLinks.map(({ href, text }) => (
+        <a href={href} class="hover:underline p-4 font-medium hover:text-white">
+          {text}
+        </a>
+      ))
+    }
+  </nav>
+</header>
