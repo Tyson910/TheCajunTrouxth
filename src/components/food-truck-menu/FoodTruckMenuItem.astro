@@ -1,0 +1,30 @@
+---
+export interface Props {
+  dishName: string;
+  description: string;
+  imageURL: string;
+  imageAlt: string;
+  specialText?: string;
+}
+
+const { dishName, description, specialText, imageURL, imageAlt } = Astro.props;
+---
+
+<li class="space-y-4">
+  <div class="aspect-w-3 aspect-h-2">
+    <img
+      class="rounded-lg object-cover shadow-sm"
+      src={imageURL}
+      alt={imageAlt}
+    />
+  </div>
+  <div class="space-y-1 text-lg leading-6">
+    <h3 class="capitalize font-semibold">{dishName}</h3>
+    <p class="text-indigo-600">{specialText}</p>
+  </div>
+  <div class="text-lg">
+    <p class="text-gray-500 font-light">
+      {description}
+    </p>
+  </div>
+</li>
