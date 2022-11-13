@@ -52,7 +52,9 @@ import "@styles/global.css";
   </head>
   <body>
     <NavBar navigationLinks={navigationLinks} />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer navigationLinks={navigationLinks} />
     <style is:global>
       /* :root {
