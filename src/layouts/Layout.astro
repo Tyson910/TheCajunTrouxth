@@ -1,0 +1,77 @@
+---
+export interface Props {
+  title: string;
+  meta_description: string;
+}
+export interface navigationLink {
+  href: string;
+  /** What is shown to end user */
+  text: string;
+}
+
+const { title, meta_description } = Astro.props;
+const navigationLinks: navigationLink[] = [
+  {
+    href: "/",
+    text: "Home",
+  },
+    {
+      href: "/index.html#menu",
+      text: "Menu",
+    },
+  {
+    href: "/index.html#catering",
+    text: "Catering",
+  },
+  {
+    href: "#contact",
+    text: "Contact",
+  },
+];
+import Footer from "@components/Footer.astro";
+import NavBar from "@components/NavBar.astro";
+import "@styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" sizes="32x32" />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content={meta_description}
+    />
+    <!-- Used by Googe -->
+    <meta
+      itemprop="description"
+      content={meta_description}
+    />
+  </head>
+  <body>
+    <NavBar navigationLinks={navigationLinks} />
+    <slot />
+    <Footer navigationLinks={navigationLinks} />
+    <style is:global>
+      /* :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      } */
+    </style>
+  </body>
+</html>
