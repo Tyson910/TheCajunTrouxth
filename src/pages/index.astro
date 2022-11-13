@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Menu from "@components/food-truck-menu/FoodTruckMenu.astro";
+import Hero from "@components/Hero.astro";
+import Section from "@components/Section.astro";
+import CateringCTA from "@components/CateringCTA.astro";
+---
+
+<Layout
+  title="The Cajun Trouxth"
+  meta_description="The Cajun Trouxth is a local food truck offering traditional New Orleans' fare like, savory Gumbo and Po' Boys made to perfection. The Cajun Trouxth make regular appearances at various locations alternating between Mayflower, Little Rock, North Little Rock, Maumelle and other locations within the Little Rock metro area. Give us a visit to get your taste of Cajun in the Central Arkansas area!"
+>
+  <Hero />
+  <Section>
+    <Menu />
+  </Section>
+  <Section outerClassNames="bg-gray-200">
+    <CateringCTA />
+  </Section>
+</Layout>
