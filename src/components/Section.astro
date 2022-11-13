@@ -1,0 +1,15 @@
+---
+import classnames from 'classnames';
+export interface Props {
+  innerClassNames?: string;
+  outerClassNames?: string;
+}
+
+const { innerClassNames, outerClassNames } = Astro.props;
+---
+
+<section class={outerClassNames}>
+  <div class={classnames("container", innerClassNames)}>
+    <slot />
+  </div>
+</section>
