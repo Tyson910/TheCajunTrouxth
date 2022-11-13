@@ -1,0 +1,69 @@
+---
+import FoodTruckMenuItem from "@components/food-truck-menu/FoodTruckMenuItem.astro";
+interface menuItem {
+  dishName: string;
+  description: string;
+  imageURL: string;
+  imageAlt: string;
+  specialText?: string;
+}
+const menuItems: menuItem[] = [
+  {
+    dishName: "Down & Dirty",
+    imageURL: "/assets/pic_2.jpg",
+    imageAlt: "Bowl of our 'Down and Dirty'",
+    // specialText: "A Fan Favorite",
+    description:
+      "A huge piece of golden fried catfish served over a bed of dirty rice and smothered in shrimp etouffee. This is our signature dish and a must try!",
+  },
+  {
+    dishName: "Jambalaya Egg Rolls",
+    imageURL: "/assets/pic_5.jpg",
+    imageAlt: "Plate of Jambalaya Egg Rolls",
+    description:
+      "Hand-rolled and made from scratch. These are paired with a homemade sauce that gives it the perfect kick of heat. The roll is packed with chicken, sausage, rice, veggies, and pepper jack cheese",
+  },
+  {
+    dishName: "Chicken & Sausage Gumbo",
+    imageURL: "/assets/pic_1.jpg",
+    imageAlt: "Bowl of Chicken and Sausage Gumbo",
+    description:
+      "Heavily seasoned soup or stew with a thick roux, plentiful amounts of shredded chicken and andouille sausage, and an enjoyable heat level that reminds you what eating proper Cajun food is all about.",
+  },
+  {
+    dishName: "Cajun Chicken Salad",
+    imageURL: "/assets/pic_4.jpg",
+    imageAlt: "Plate of Salad",
+    description:
+      "For a healthier option, The Cajun Trouxth also offers an enormous salad with seasoned, sliced chicken breast meat, along with lettuce, croutons, cheddar, grape tomatoes, and cucumbers.",
+  },
+];
+---
+
+<div class="py-12 lg:py-24">
+  <div
+    class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:gap-x-40 lg:space-y-0"
+  >
+    <div class="space-y-5 sm:space-y-4 col-span-full">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Menu</h2>
+      <p class="text-xl text-gray-500">
+        We offer a a small, rotating, focused menu, that offers traditional New
+        Orleans' fare like savory Gumbo and Po' Boys. Come alot so you can try
+        every item! #SorryNotSorry The Cajun Trouxth make regular appearances at
+        various locations alternating between Mayflower, Little Rock, North
+        Little Rock, Maumelle and other locations within the Little Rock metro
+        area. Give us a visit to get your taste of Cajun in the Central Arkansas
+        area!
+      </p>
+    </div>
+    <div class="lg:col-span-full">
+      <ul
+        role="list"
+        class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
+      >
+        {menuItems.map((item) => <FoodTruckMenuItem {...item} />)}
+      </ul>
+      <p class="font-bold text-right text-5xl mt-36">And more...</p>
+    </div>
+  </div>
+</div>
